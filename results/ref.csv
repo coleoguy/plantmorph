@@ -1,0 +1,7 @@
+﻿file name,organism,phenotype,SCS,LH or M 
+area.csv,"Solanum lycopersicum, Solanum pennellii ",area of lamina,NSC,M
+perimeter.csv,"Solanum lycopersicum, Solanum pennellii ",perimeter of lamina,NSC,M
+RPA.csv,"Solanum lycopersicum, Solanum pennellii ",ratio of perimeter of lamina to area of lamina,NSC,M
+RWL.csv,"Solanum lycopersicum, Solanum pennellii ",ratio of width of lamina to length of lamina,NSC,M
+AR.csv,"Solanum lycopersicum, Solanum pennellii ",ratio of left area of lamina to right area of lamina,NSC,M
+seed mass.csv,"Solanum lycopersicum, Solanum pennellii ",mass of seed,NSC,LH
