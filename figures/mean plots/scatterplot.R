@@ -3,8 +3,8 @@ library(ggplot2)
 # input cross, mean, & se for area 
 area <- data.frame(
   Proportion_of_P2_Genome = c("0", "1.0", "0.5", "0.25", "0.75"),
-  Mean = c(6.533699134, 15.87246193, 10.07699895, 12.34836014, 11.37020341),
-  Error = c(0.3543070487, 2.119134833, 0.4799164276, 1.004502884, 0.7940298069),
+  Mean = c(6.522816683, 16.47951258, 9.739500903, 11.62506596, 11.81500181),
+  Error = c(0.5479797328, 1.67954809, 1.030987101, 0.9403660416, 0.8011958025),
   labels = c("P1", "P2", "F2", "BC1", "rBC2"))
 
 # specify order of variables on x axis
@@ -28,8 +28,8 @@ ggplot(area, aes(x = Proportion_of_P2_Genome, y = Mean)) +
 # input cross, mean, & se for perimeter 
 perimeter <- data.frame(
   Proportion_of_P2_Genome = c("0", "1.0", "0.5", "0.25", "0.75"),
-  Mean = c(10.15358106, 23.13941997, 13.11058788, 14.81769361, 17.2413835),
-  Error = c(0.2463915756, 1.764763705, 0.3957232954, 0.7623885, 0.8215406456),
+  Mean = c(10.15521918, 23.2138416, 13.379385, 14.19022123, 17.53230858),
+  Error = c(0.4598082241, 1.500010453, 0.8818388568, 0.8689069691, 0.7607440585),
   labels = c("P1", "P2", "F2", "BC1", "rBC2"))
 
 # specify order of variables on x axis
@@ -51,8 +51,8 @@ ggplot(perimeter, aes(x = Proportion_of_P2_Genome, y = Mean)) +
 # input cross, mean, & se for RPA 
 RPA <- data.frame(
   Proportion_of_P2_Genome = c("0", "1.0", "0.5", "0.25", "0.75"),
-  Mean = c(1.617650199, 1.58563884, 1.328731029, 1.243467581, 1.596873715),
-  Error = c(0.05678436813, 0.09525088085, 0.06108472817, 0.03952401332, 0.08196590792),
+  Mean = c(1.62169999, 1.580200273, 1.420142672, 1.26091521, 1.631856208),
+  Error = c(0.2118316066, 0.3417123428, 0.3481225017, 0.1918223153, 0.2417640031),
   labels = c("P1", "P2", "F2", "BC1", "rBC2"))
 
 # specify order of variables on x axis
@@ -75,8 +75,8 @@ ggplot(RPA, aes(x = Proportion_of_P2_Genome, y = Mean)) +
 # input cross, mean, & se for length 
 length <- data.frame(
   Proportion_of_P2_Genome = c("0", "1.0", "0.5", "0.25", "0.75"),
-  Mean = c(3.207282694, 7.405447356, 4.797399879, 5.215230407, 5.804475124),
-  Error = c(0.09949531454, 0.4057783646, 0.2047031112, 0.1784998337, 0.2008419189),
+  Mean = c(3.206489019, 7.625249363, 4.900700137, 5.02182517, 5.824766952),
+  Error = c(0.2920426845, 0.7634162396, 0.6940610201, 0.4399164335, 0.3875928547),
   labels = c("P1", "P2", "F2", "BC1", "rBC2"))
 
 # specify order of variables on x axis
@@ -99,8 +99,8 @@ ggplot(length, aes(x = Proportion_of_P2_Genome, y = Mean)) +
 # input cross, mean, & se for width 
 width <- data.frame(
   Proportion_of_P2_Genome = c("0", "1.0", "0.5", "0.25", "0.75"),
-  Mean = c(2.723302344, 3.494440269, 3.018940253, 3.389376425, 3.043161568),
-  Error = c(0.06749890438, 0.2768415185, 0.08663302733, 0.1627969767, 0.1201719855),
+  Mean = c(2.719552445, 3.603638761, 2.918421661, 3.22071845, 3.057632194),
+  Error = c(0.2334454513, 0.6016688766, 0.4060046694, 0.4218805338, 0.323643964),
   labels = c("P1", "P2", "F2", "BC1", "rBC2"))
 
 # specify order of variables on x axis
@@ -123,8 +123,8 @@ ggplot(width, aes(x = Proportion_of_P2_Genome, y = Mean)) +
 # input cross, mean, & se for RWL 
 RWL <- data.frame(
   Proportion_of_P2_Genome = c("0", "1.0", "0.5", "0.25", "0.75"),
-  Mean = c(0.8559538957, 0.4732852765, 0.638959135, 0.6417597135, 0.5255478908),
-  Error = c(0.01687969226, 0.02400445764, 0.02544189235, 0.01554233064, 0.0129555724),
+  Mean = c(0.8549358369, 0.4734154518, 0.6064846044, 0.6385036202, 0.5259053835),
+  Error = c(0.1167319674, 0.1754081161, 0.1666790903, 0.1555551483, 0.1086750454),
   labels = c("P1", "P2", "F2", "BC1", "rBC2"))
 
 # specify order of variables on x axis
@@ -147,8 +147,8 @@ ggplot(RWL, aes(x = Proportion_of_P2_Genome, y = Mean)) +
 # input cross, mean, & se for AR 
 AR <- data.frame(
   Proportion_of_P2_Genome = c("0", "1.0", "0.5", "0.25", "0.75"),
-  Mean = c(1.037326488, 1.077977709, 1.005760094, 1.072527783, 0.996782799),
-  Error = c(0.0529456587, 0.1313908477, 0.06621789001, 0.0969596023, 0.06751460061),
+  Mean = c(1.038318811, 1.086268307, 0.9476895959, 1.065733981, 0.9927631834),
+  Error = c(0.2082486584, 0.4017382248, 0.3230882372, 0.3700790176, 0.2508136468),
   labels = c("P1", "P2", "F2", "BC1", "rBC2"))
 
 # specify order of variables on x axis

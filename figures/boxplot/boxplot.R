@@ -119,18 +119,18 @@ ggplot(length) +
 
 #Width: 
   #Specify variables and values. Then, make data frame.
-Genetic_Effect<-c("Mea", "AaAd", "AaCa")
-Model_Weighted_Average<-c(-0.441989828321209, 0.761073656070445,-0.224576766258971)
-SE <- c(0.000160411680135943, 0.652349114080603, 0.326174492383309)
-Variable_Importance <- c(0.999999978865205, 0.5714285587473, 0.571428561397784)
+Genetic_Effect<-c("Mea", "AaAd")
+Model_Weighted_Average<-c(-0.441989828321209, 0.761073656070445)
+SE <- c(0.000160411680135943, 0.652349114080603)
+Variable_Importance <- c(0.999999978865205, 0.5714285587473)
 width<-data.frame(Genetic_Effect, Model_Weighted_Average, SE, Variable_Importance)
 
   #Specify order of variables on x-axis
-width$Genetic_Effect <- factor(width$Genetic_Effect, levels = c("Mea", "AaAd", "AaCa"))
+width$Genetic_Effect <- factor(width$Genetic_Effect, levels = c("Mea", "AaAd"))
 
   #Create plot 
 ggplot(width) +
-  geom_bar(aes(x= Genetic_Effect, y= Model_Weighted_Average, fill = Variable_Importance, width = 0.9), stat="identity") +
+  geom_bar(aes(x= Genetic_Effect, y= Model_Weighted_Average, fill = Variable_Importance, width = 0.6), stat="identity") +
   scale_fill_viridis_c(limits = c(0, 1))+
   labs(x = "Genetic Effect", y = "Model Weighted Average", fill = "Variable Importance")+
   ggtitle("Width")+
@@ -143,24 +143,24 @@ ggplot(width) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=12),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.45)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.3)
 
 
 
 #RWL:
   #Specify variables and values. Then, make data frame.
-Genetic_Effect<-c("Aa", "Ca", "AaCa")
-Model_Weighted_Average<-c(0.0983503081515926, 0.0854515062721672, -0.0128988018794251)
-SE <- c(0.0721171671523961, 0.0692571863416293, 0.0663458855081491)
-Variable_Importance <- c(0.632449162926565, 0.628934731371935, 0.615286653395504)
+Genetic_Effect<-c("Aa", "Ca")
+Model_Weighted_Average<-c(0.0983503081515926, 0.0854515062721672)
+SE <- c(0.0721171671523961, 0.0692571863416293)
+Variable_Importance <- c(0.632449162926565, 0.628934731371935)
 RWL<-data.frame(Genetic_Effect, Model_Weighted_Average, SE, Variable_Importance)
 
   #Specify order of variables on x-axis
-RWL$Genetic_Effect <- factor(RWL$Genetic_Effect, levels = c("Aa", "Ca", "AaCa"))
+RWL$Genetic_Effect <- factor(RWL$Genetic_Effect, levels = c("Aa", "Ca"))
 
   #Create plot 
 ggplot(RWL) +
-  geom_bar(aes(x= Genetic_Effect, y= Model_Weighted_Average, fill = Variable_Importance, width = 0.9), stat="identity") +
+  geom_bar(aes(x= Genetic_Effect, y= Model_Weighted_Average, fill = Variable_Importance, width = 0.6), stat="identity") +
   scale_fill_viridis_c(limits = c(0, 1))+
   labs(x = "Genetic Effect", y = "Model Weighted Average", fill = "Variable Importance")+
   ggtitle("Ratio of Width to Length")+
@@ -173,7 +173,7 @@ ggplot(RWL) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=15),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.45)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.3)
 
 
 #AR:
