@@ -1,4 +1,5 @@
 library(ggplot2)
+library(rlang)
 
 # input cross, mean, & se for area 
 area <- data.frame(
@@ -10,13 +11,13 @@ area <- data.frame(
 # specify order of variables on x axis
 area$Proportion_of_P2_Genome <- factor(area$Proportion_of_P2_Genome, levels = c("0", "0.25", "0.5", "0.75", "1.0"))
 
+
 # create scatterplot for area
 ggplot(area, aes(x = Proportion_of_P2_Genome, y = Mean)) +
   geom_point() +
   geom_errorbar(aes(ymin = Mean - Error, ymax = Mean + Error), width = 0.2) +
-  labs(x = "Proportion of P2 Genome", y = "Mean") +
+  labs(x = "Proportion of P2 Genome", y = expression("Area (cm"^2*")")) +
   theme_bw()+
-  ggtitle("Area")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(text = element_text(size = 20, color= "black"))+
   geom_segment(aes(x = Proportion_of_P2_Genome[1], y = Mean[1], xend = Proportion_of_P2_Genome[2], yend = Mean[2]), lty = 2)+
@@ -39,9 +40,8 @@ perimeter$Proportion_of_P2_Genome <- factor(perimeter$Proportion_of_P2_Genome, l
 ggplot(perimeter, aes(x = Proportion_of_P2_Genome, y = Mean)) +
   geom_point() +
   geom_errorbar(aes(ymin = Mean - Error, ymax = Mean + Error), width = 0.2) +
-  labs(x = "Proportion of P2 Genome", y = "Mean") +
+  labs(x = "Proportion of P2 Genome", y = "Perimeter (cm)") +
   theme_bw()+
-  ggtitle("Perimeter")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(text = element_text(size = 20, color= 'black'))+
   geom_segment(aes(x = Proportion_of_P2_Genome[1], y = Mean[1], xend = Proportion_of_P2_Genome[2], yend = Mean[2]), lty = 2)+
@@ -62,9 +62,8 @@ RPA$Proportion_of_P2_Genome <- factor(RPA$Proportion_of_P2_Genome, levels = c("0
 ggplot(RPA, aes(x = Proportion_of_P2_Genome, y = Mean)) +
   geom_point() +
   geom_errorbar(aes(ymin = Mean - Error, ymax = Mean + Error), width = 0.2) +
-  labs(x = "Proportion of P2 Genome", y = "Mean") +
+  labs(x = "Proportion of P2 Genome", y = expression("Ratio of Perimeter to Area (cm"^-1*")")) +
   theme_bw()+
-  ggtitle("Ratio of Perimeter to Area")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(text = element_text(size = 20, color= 'black'))+
   geom_segment(aes(x = Proportion_of_P2_Genome[1], y = Mean[1], xend = Proportion_of_P2_Genome[2], yend = Mean[2]), lty = 2)+
@@ -86,9 +85,8 @@ length$Proportion_of_P2_Genome <- factor(length$Proportion_of_P2_Genome, levels 
 ggplot(length, aes(x = Proportion_of_P2_Genome, y = Mean)) +
   geom_point() +
   geom_errorbar(aes(ymin = Mean - Error, ymax = Mean + Error), width = 0.2) +
-  labs(x = "Proportion of P2 Genome", y = "Mean") +
+  labs(x = "Proportion of P2 Genome", y = "Length (cm)") +
   theme_bw()+
-  ggtitle("Length")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(text = element_text(size = 20, color= 'black'))+
   geom_segment(aes(x = Proportion_of_P2_Genome[1], y = Mean[1], xend = Proportion_of_P2_Genome[2], yend = Mean[2]), lty = 2)+
@@ -110,9 +108,8 @@ width$Proportion_of_P2_Genome <- factor(width$Proportion_of_P2_Genome, levels = 
 ggplot(width, aes(x = Proportion_of_P2_Genome, y = Mean)) +
   geom_point() +
   geom_errorbar(aes(ymin = Mean - Error, ymax = Mean + Error), width = 0.2) +
-  labs(x = "Proportion of P2 Genome", y = "Mean") +
+  labs(x = "Proportion of P2 Genome", y = "Width (cm)") +
   theme_bw()+
-  ggtitle("Width")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(text = element_text(size = 20, color= 'black'))+
   geom_segment(aes(x = Proportion_of_P2_Genome[1], y = Mean[1], xend = Proportion_of_P2_Genome[2], yend = Mean[2]), lty = 2)+
@@ -134,9 +131,8 @@ RWL$Proportion_of_P2_Genome <- factor(RWL$Proportion_of_P2_Genome, levels = c("0
 ggplot(RWL, aes(x = Proportion_of_P2_Genome, y = Mean)) +
   geom_point() +
   geom_errorbar(aes(ymin = Mean - Error, ymax = Mean + Error), width = 0.2) +
-  labs(x = "Proportion of P2 Genome", y = "Mean") +
+  labs(x = "Proportion of P2 Genome", y = "Ratio of Width to Length") +
   theme_bw()+
-  ggtitle("Ratio of Width to Length")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(text = element_text(size = 20, color= 'black'))+
   geom_segment(aes(x = Proportion_of_P2_Genome[1], y = Mean[1], xend = Proportion_of_P2_Genome[2], yend = Mean[2]), lty = 2)+
@@ -158,9 +154,8 @@ AR$Proportion_of_P2_Genome <- factor(AR$Proportion_of_P2_Genome, levels = c("0",
 ggplot(AR, aes(x = Proportion_of_P2_Genome, y = Mean)) +
   geom_point() +
   geom_errorbar(aes(ymin = Mean - Error, ymax = Mean + Error), width = 0.2) +
-  labs(x = "Proportion of P2 Genome", y = "Mean") +
+  labs(x = "Proportion of P2 Genome", y = "Areal Ratio") +
   theme_bw()+
-  ggtitle("Areal Ratio")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(text = element_text(size = 20, color= 'black'))+
   geom_segment(aes(x = Proportion_of_P2_Genome[1], y = Mean[1], xend = Proportion_of_P2_Genome[2], yend = Mean[2]), lty = 2)+
@@ -182,9 +177,8 @@ seed_mass$Proportion_of_P2_Genome <- factor(seed_mass$Proportion_of_P2_Genome, l
 ggplot(seed_mass, aes(x = Proportion_of_P2_Genome, y = Mean)) +
   geom_point() +
   geom_errorbar(aes(ymin = Mean - Error, ymax = Mean + Error), width = 0.2) +
-  labs(x = "Proportion of P2 Genome", y = "Mean") +
+  labs(x = "Proportion of P2 Genome", y = "Seed Mass (mg)") +
   theme_bw()+
-  ggtitle("Seed Mass")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(text = element_text(size = 20, color= 'black'))+
   geom_segment(aes(x = Proportion_of_P2_Genome[1], y = Mean[1], xend = Proportion_of_P2_Genome[2], yend = Mean[2]), lty = 2)+
