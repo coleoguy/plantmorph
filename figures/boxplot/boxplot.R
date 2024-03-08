@@ -27,7 +27,8 @@ geom_bar(aes(x= Genetic_Effect, y= Model_Weighted_Average, fill = Variable_Impor
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=15),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.3)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.3) +
+  geom_hline(yintercept = 0, linetype = "dotted")
 
 
 #Perimeter:
@@ -56,7 +57,8 @@ ggplot(perimeter) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=13),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE, width = 0.45))
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE, width = 0.45))+
+  geom_hline(yintercept = 0, linetype = "dotted")
 
 
 #RPA:
@@ -85,7 +87,8 @@ ggplot(RPA) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=15),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.15)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.15)+
+  geom_hline(yintercept = 0, linetype = "dotted")
 
 
 #Length: 
@@ -114,7 +117,8 @@ ggplot(length) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=15),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.15)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.15)+
+  geom_hline(yintercept = 0, linetype = "dotted")
 
 
 #Width: 
@@ -143,7 +147,8 @@ ggplot(width) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=12),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.3)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.3)+
+  geom_hline(yintercept = 0, linetype = "dotted")
 
 
 
@@ -173,7 +178,8 @@ ggplot(RWL) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=15),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.3)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.3)+
+  geom_hline(yintercept = 0, linetype = "dotted")
 
 
 #AR:
@@ -202,7 +208,8 @@ ggplot(AR) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=15),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.15)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.15)+
+  geom_hline(yintercept = 0, linetype = "dotted")
 
 
 #Seed Mass:
@@ -231,5 +238,6 @@ ggplot(seed_mass) +
   theme(text = element_text(size = 15))+
   theme(axis.text.x = element_text(size=15),
         axis.text.y = element_text(size=15))+
-  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.45)
+  geom_errorbar(aes(x=Genetic_Effect, y=Model_Weighted_Average, ymin=Model_Weighted_Average-SE, ymax=Model_Weighted_Average+SE), width = 0.45)+
+  geom_hline(yintercept = 0, linetype = "dotted")
 
