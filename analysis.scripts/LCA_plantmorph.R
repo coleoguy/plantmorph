@@ -2,8 +2,8 @@ library(SAGA2)
 library(viridis)
 
 # leaf area excluding F1
-dat <- read.csv("area.csv")
-cmat <- as.matrix(read.csv("cmatNOF1.csv"))
+dat <- read.csv("../data/area.csv")
+cmat <- as.matrix(read.csv("../data/cmat/cmatNOF1.csv"))
 res <- LCA(dat,
            SCS="NSC",
            parental = "calc",
@@ -17,8 +17,8 @@ res$varimp
 
 
 # leaf perimeter excluding F1
-dat <- read.csv("perimeter.csv")
-cmat <- as.matrix(read.csv("cmatNOF1.csv"))
+dat <- read.csv("../data/perimeter.csv")
+cmat <- as.matrix(read.csv("../data/cmat/cmatNOF1.csv"))
 res <- LCA(dat,
            SCS="NSC",
            parental = "calc",
@@ -32,8 +32,8 @@ res$varimp
 
 
 # RPA excluding F1
-dat <- read.csv("RPA.csv")
-cmat <- as.matrix(read.csv("cmatNOF1.csv"))
+dat <- read.csv("../data/RPA.csv")
+cmat <- as.matrix(read.csv("../data/cmat/cmatNOF1.csv"))
 res <- LCA(dat,
            SCS="NSC",
            parental = "calc",
@@ -47,8 +47,8 @@ res$varimp
 
 
 # symmetry excluding F1
-dat <- read.csv("AR.csv")
-cmat <- as.matrix(read.csv("cmatNOF1.csv"))
+dat <- read.csv("../data/AR.csv")
+cmat <- as.matrix(read.csv("../data/cmat/cmatNOF1.csv"))
 res <- LCA(dat,
            SCS="NSC",
            parental = "calc",
@@ -62,8 +62,8 @@ res$varimp
 
 
 # length excluding F1
-dat <- read.csv("length.csv")
-cmat <- as.matrix(read.csv("cmatNOF1.csv"))
+dat <- read.csv("../data/length.csv")
+cmat <- as.matrix(read.csv("../data/cmat/cmatNOF1.csv"))
 res <- LCA(dat,
            SCS="NSC",
            parental = "calc",
@@ -77,8 +77,8 @@ res$varimp
 
 
 # width excluding F1
-dat <- read.csv("width.csv")
-cmat <- as.matrix(read.csv("cmatNOF1.csv"))
+dat <- read.csv("../data/width.csv")
+cmat <- as.matrix(read.csv("../data/cmat/cmatNOF1.csv"))
 res <- LCA(dat,
            SCS="NSC",
            parental = "calc",
@@ -92,8 +92,8 @@ res$varimp
 
 
 # roundness excluding F1
-dat <- read.csv("RWL.csv")
-cmat <- as.matrix(read.csv("cmatNOF1.csv"))
+dat <- read.csv("../data/RWL.csv")
+cmat <- as.matrix(read.csv("../data/cmat/cmatNOF1.csv"))
 res <- LCA(dat,
            SCS="NSC",
            parental = "calc",
@@ -107,8 +107,8 @@ res$varimp
 
 
 # seed weight excluding F1
-dat <- read.csv("seed mass.csv")
-cmat <- as.matrix(read.csv("cmatNOF1.csv"))
+dat <- read.csv("../data/seed mass.csv")
+cmat <- as.matrix(read.csv("../data/cmat/cmatNOF1.csv"))
 res <- LCA(dat,
            SCS="NSC",
            parental = "calc",

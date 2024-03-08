@@ -1,5 +1,5 @@
 # read in results file
-dat <- read.csv("results/resultsNOF1.csv")
+dat <- read.csv("../results/resultsNOF1.csv")
 #ref <- read.csv("ref.csv")
 
 # function that takes in raw LCA results and returns the proportion of additive, 
@@ -51,4 +51,4 @@ for(i in seq(from=1, by=3, length.out=(nrow(dat)/3))){
 # saving final.results as a csv to desktop 
 directory <-getwd()
 directory
-write.csv(final.results, "final.resultsNOF1.csv")
+write.csv(final.results, "../results/final.resultsNOF1.csv")
